@@ -1,40 +1,66 @@
-# Datamanagementgroup11-9014
-Group project
-Project Overview
+# London Transit Ridership Web App
 
-The London Transit Ridership Web Application is designed to:
-Store and manage transit ridership data
-Allow admins to insert and manage operational data
-Allow users to explore transit data through filters
-Visualize ridership trends using interactive charts
-Demonstrate real-world data engineering + web development concepts
+A full-stack web app for storing, managing and exploring London transit ridership data. Built as a group project for a graduate Data Management course (ECE 9014) at Western University.
 
-Frontend
-HTML5 – Structure
-CSS3 – Responsive dashboard styling
-JavaScript (ES6) – Client-side logic
-Chart.js – Data visualization (line charts for ridership trends)
+Admins can add and manage operational data, and users can filter the data and see ridership trends on interactive charts.
 
-Backend
-Python Flask – Web framework
-Flask-Login – Authentication & session management
-Flask-CORS – Cross-origin requests
+![Dashboard screenshot](images/dashboard.png)
 
-Database
-MySQL – Relational database
-CSV / Excel integration – Initial dataset ingestion
+## What it does
+- **Stores ridership data** in a MySQL relational database, loaded from CSV/Excel files
+- **Admin tools:** secure login to insert, update and manage operational data
+- **Data exploration:** filter ridership by route, date and other fields
+- **Trend charts:** interactive Chart.js line charts showing how ridership changes over time
+- **Login and sessions:** separate access for admins and regular users
 
-How to Run the Project
-1️.Clone the Repository
-https://github.com/adalve02/Datamanagementgroup11-9014
-2️. Create Virtual Environment
+## Tech stack
+| Layer | Tools |
+|---|---|
+| Frontend | HTML5, CSS3 (responsive dashboard), JavaScript (ES6), Chart.js |
+| Backend | Python, Flask, Flask-Login, Flask-CORS |
+| Database | MySQL, CSV/Excel data import |
+
+## What I learned
+- Designing a relational database schema and writing SQL to query it
+- Loading raw CSV/Excel data into a clean, structured database
+- Connecting a Flask backend to MySQL and serving data to a dashboard
+- Adding login, sessions and user roles to a web app
+- Turning query results into charts people can read quickly
+
+## How to run it
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/adalve02/Datamanagementgroup11-9014.git
+cd Datamanagementgroup11-9014
+```
+
+**2. Create and activate a virtual environment**
+```bash
 python -m venv venv
-source venv/bin/activate # Windows: venv\Scripts\activate
-3️.Install Dependencies
+# Windows
+venv\Scripts\activate
+# Mac/Linux
+source venv/bin/activate
+```
+
+**3. Install dependencies**
+```bash
 pip install -r requirements.txt
-4️.Configure Database
-Create MySQL database
-Update credentials in config.py
-Import schema using provided SQL file
-5️.Run Flask App
+```
+
+**4. Set up the database**
+- Create a MySQL database
+- Import the schema from the provided SQL file (`schema.sql`)
+- Add your MySQL username and password in `config.py`
+
+**5. Run the app**
+```bash
 python app.py
+```
+Then open `http://127.0.0.1:5000` in your browser.
+
+## Team
+Group 11, ECE 9014 Data Management, Western University
+- Ashwini Dalve
+- (add teammates' names)
