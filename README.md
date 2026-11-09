@@ -4,8 +4,6 @@ A full-stack web app for storing, managing and exploring London transit ridershi
 
 Admins can add and manage operational data, and users can filter the data and see ridership trends on interactive charts.
 
-![Dashboard screenshot](images/dashboard.png)
-
 ## What it does
 - **Stores ridership data** in a MySQL relational database, loaded from CSV/Excel files
 - **Admin tools:** secure login to insert, update and manage operational data
